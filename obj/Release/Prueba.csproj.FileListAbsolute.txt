@@ -1,0 +1,13 @@
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\bin\Release\Prueba.exe.config
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\bin\Release\Prueba.exe
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\bin\Release\Prueba.pdb
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\Prueba.frmConfiguracion.resources
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\Prueba.frmLoginn.resources
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\Prueba.frmSplash.resources
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\Prueba.frmLogin.resources
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\Prueba.Properties.Resources.resources
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\Prueba.csproj.GenerateResource.Cache
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\RdlCompile.cache
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\RdlCompile.compiled
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\Prueba.exe
+C:\Users\claudia\Documents\Visual Studio 2012\Projects\Prueba\Prueba\obj\Release\Prueba.pdb
