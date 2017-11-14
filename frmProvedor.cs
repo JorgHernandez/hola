@@ -24,6 +24,21 @@ namespace Prueba
 
         private void btnnuevoproducto_Click(object sender, EventArgs e)
         {
+            if (btnnuevoproducto.Text == "NUEVO")
+            {
+                nuevo();
+                Limpiar();
+                this.btnnuevoproducto.Enabled = true;
+                this.btnCancelar.Enabled = true;
+                btnnuevoproducto.Text = "GUARDAR";
+              pictureBox1.Visible = true;
+            }
+            else
+            {
+                registrar();
+                pictureBox1.Visible = false;
+            }
+
             nuevo();
             Limpiar();
             this.btnnuevoproducto.Enabled = false;
@@ -31,6 +46,40 @@ namespace Prueba
         }
 
         private void btnguardarproducto_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btneditarproducto_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtname.Text) || string.IsNullOrWhiteSpace(txtapPat.Text) || string.IsNullOrWhiteSpace(txtapMat.Text) || string.IsNullOrWhiteSpace(txtTel.Text) || string.IsNullOrWhiteSpace(txtDirec.Text))
+
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else
+            {
+                proveedor.Nombre = txtname.Text.Trim();
+                proveedor.apmaterno = txtapPat.Text.Trim();
+                proveedor.appaterno = txtapMat.Text.Trim();
+                proveedor.telefonoProv = txtTel.Text.Trim();
+                proveedor.direccionPro = txtDirec.Text.Trim();
+                proveedor.Id = int.Parse(textBox1.Text);
+                if (clsProveedores.Actualizar(proveedor) > 0)
+                {
+                    MessageBox.Show("Los datos del Proveedor se actualizaron", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                    Deshabilitar();
+
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar", "Error al Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+                dataGridView1.DataSource = proveedor.MuestraProveedor();
+            }
+        }
+
+        public void registrar()
         {
             if (string.IsNullOrWhiteSpace(txtname.Text) || string.IsNullOrWhiteSpace(txtapPat.Text) || string.IsNullOrWhiteSpace(txtapMat.Text) || string.IsNullOrWhiteSpace(txtTel.Text) || string.IsNullOrWhiteSpace(txtDirec.Text))
 
@@ -63,36 +112,6 @@ namespace Prueba
                 Limpiar();
             }
         }
-
-        private void btneditarproducto_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtname.Text) || string.IsNullOrWhiteSpace(txtapPat.Text) || string.IsNullOrWhiteSpace(txtapMat.Text) || string.IsNullOrWhiteSpace(txtTel.Text) || string.IsNullOrWhiteSpace(txtDirec.Text))
-
-                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
-            {
-                proveedor.Nombre = txtname.Text.Trim();
-                proveedor.apmaterno = txtapPat.Text.Trim();
-                proveedor.appaterno = txtapMat.Text.Trim();
-                proveedor.telefonoProv = txtTel.Text.Trim();
-                proveedor.direccionPro = txtDirec.Text.Trim();
-                proveedor.Id = int.Parse(textBox1.Text);
-                if (clsProveedores.Actualizar(proveedor) > 0)
-                {
-                    MessageBox.Show("Los datos del Proveedor se actualizaron", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Limpiar();
-                    Deshabilitar();
-
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo actualizar", "Error al Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                }
-                dataGridView1.DataSource = proveedor.MuestraProveedor();
-            }
-        }
-
         private void btneliminarproducto_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta Seguro que desea eliminar el Proveedor Actual", "Estas Seguro??", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

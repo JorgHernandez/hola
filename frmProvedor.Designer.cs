@@ -49,7 +49,9 @@
             this.btneditarproducto = new System.Windows.Forms.Button();
             this.btnguardarproducto = new System.Windows.Forms.Button();
             this.btnnuevoproducto = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -252,11 +254,21 @@
             this.btnnuevoproducto.UseVisualStyleBackColor = true;
             this.btnnuevoproducto.Click += new System.EventHandler(this.btnnuevoproducto_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Prueba.Properties.Resources.Floppy;
+            this.pictureBox1.Location = new System.Drawing.Point(64, 272);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 44);
+            this.pictureBox1.TabIndex = 93;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmProvedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 561);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -280,6 +292,7 @@
             this.Name = "frmProvedor";
             this.Text = "frmProvedor";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +320,6 @@
         private System.Windows.Forms.TextBox txtapMat;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
