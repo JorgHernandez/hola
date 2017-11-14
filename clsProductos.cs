@@ -26,6 +26,7 @@ namespace Prueba
 
             //product.Imagen = nuevo.ToString();
             //este es un mensaje
+            //tengo varios problemas
             MySqlCommand comando = new MySqlCommand(string.Format("Insert into tblproductos (vch_nombre, vch_categoria, int_precio, vch_imagen, vch_descripcion) values ('{0}','{1}','{2}', '{3}', '{4}')",
                 product.Nombre, product.Categoria, product.Precio, product.Imagen, product.Descripcion), ClsConexion.ObtenerConexion());
 
